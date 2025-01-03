@@ -459,8 +459,9 @@ Description: Write a CTAS query to create a new table that lists each member and
     The resulting table should show:
     Member ID
     Number of overdue books
-    Total fines
-
+    Total fines.
+    
+```sql
 CREATE TABLE total_fines
          AS    
 (SELECT 
@@ -488,6 +489,7 @@ FROM
     return_status AS r ON ist.issued_id = r.issued_id
 GROUP BY ist.issue_member_id
 ORDER BY ist.issue_member_id) ;
+```
 
 ## Reports
 
